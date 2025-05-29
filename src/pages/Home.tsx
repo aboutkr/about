@@ -6,7 +6,7 @@ export default function Home() {
                 <div className="lg:h-screen h-72 w-full relative">
                     <img
                         className="w-full absolute bottom-24 object-cover"
-                        src="./name.png"
+                        src="./name2.png"
                         alt="aboutName"
                     />
                 </div>

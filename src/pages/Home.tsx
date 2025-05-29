@@ -98,8 +98,7 @@ export default function Home() {
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-semibold text-neutral-800 mb-8">A B O U T 의 목표</h2>
                     <p className="text-base md:text-lg text-neutral-600 leading-relaxed">
-                        어바웃의 목표는 대한민국 청년들의 지적 수준을 높여 합리적이고 효율적인 생활을 할 수 있도록 돕는
-                        것입니다.
+                        어바웃의 목표는 청년들의 지적 수준을 높여 합리적이고 효율적인 생활을 할 수 있도록 돕는 것입니다.
                         <br />
                         <br />
                         빠르게 변화하는 사회 속에서 함몰되지 않기 위해 스스로에 대한 노력의 시간을 확보해야 합니다.

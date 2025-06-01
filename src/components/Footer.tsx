@@ -3,11 +3,11 @@ import { Instagram } from 'lucide-react';
 
 export default function Footer() {
     return (
-        <footer className="w-full bg-gray-100 text-gray-600">
+        <footer className="w-full bg-Adeepblue text-Abeige">
             <div className="max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row md:justify-between gap-8">
                 <div className="flex-1">
                     <h2 className="text-lg font-semibold mb-2">MySite</h2>
-                    <p className="text-sm text-gray-500 leading-relaxed">
+                    <p className="text-sm text-Abeige leading-relaxed">
                         청년을 위한 콘텐츠 플랫폼
                         <br />
                         다양한 활동과 영감을 공유합니다.

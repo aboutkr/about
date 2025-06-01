@@ -1,115 +1,172 @@
 export default function Home() {
     return (
         <>
-            {/* Hero Section */}
-            <section className="lg:min-h-screen text-white flex flex-col items-center justify-center relative">
-                <div className="lg:h-screen h-72 w-full relative">
-                    <img
-                        className="w-full absolute bottom-24 object-cover"
-                        src="./name.png"
-                        alt="aboutName"
-                    />
-                </div>
-            </section>
+        <section className="bg-Apink pt-[72px] px-20 lg:min-h-screen before:relative ">
+        <div className="w-full relative">
+            <div
+            className="text-Adeepblue font-playfair italic absolute left-[5vw] top-[15vh] whitespace-nowrap"
+            style={{ fontSize: '10vw', maxWidth: '80vw', lineHeight: '1.2' }}
+            >
+            <div className="mb-2">What's On</div>
+            <div className="ml-[13vw]">Your Mind?</div>
+            </div>
+        </div>
 
-            <section className="min-h-screen bg-light text-gray-900 flex flex-col items-center justify-center relative px-4 py-16 overflow-hidden">
-                <h1 className="absolute bottom-[-30px] left-1/2 -translate-x-1/2 text-[6rem] md:text-[10rem] font-bold opacity-10 text-gray-800 pointer-events-none select-none z-0">
-                    FILLVOID
-                </h1>
+        <div className="absolute bottom-0 left-0 w-full h-[100px] pointer-events-none">
+            <svg
+            viewBox="0 0 1440 100"
+            className="w-full h-full"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+            <path
+                fill="#FFFCFB"
+                d="
+                M0,60 
+                Q 60,20 120,60 
+                T 240,60 
+                T 360,60 
+                T 480,60 
+                T 600,60 
+                T 720,60 
+                T 840,60 
+                T 960,60 
+                T 1080,60 
+                T 1200,60 
+                T 1320,60 
+                T 1440,60 
+                V 100 
+                H 0 
+                Z
+                "
+            />
+            </svg>
 
-                <div className="w-full max-w-6xl z-10 flex flex-col gap-10">
-                    {/* 첫 번째 줄 */}
-                    <div className="flex flex-col md:flex-row gap-4">
-                        <div className="bg-white p-4 rounded-xl shadow-md h-48 md:h-40 flex flex-col justify-between w-full md:w-1/2">
-                            <h3 className="text-xl font-bold mb-2">FILLVOID</h3>
-                            <p className="text-sm text-gray-700 leading-snug">
-                                어바웃에서는 대외 활동을 하고 있는 모든 청년들과 소통하고 공유하는 모임을 준비했습니다.
-                                <br />
-                                어바웃에서는 '질문'에서 부터 시작했습니다.
-                                <br />
-                                나에게 꼭 필요한 질문을 통해 튜터와 함께 하는 모임 콘텐츠를 제공하여 교육 문화를
-                                선도하고자 합니다.
-                            </p>
-                        </div>
-                        <div className="bg-white rounded-xl shadow-md h-48 md:h-40 overflow-hidden w-full md:w-1/2">
-                            <img
-                                src="/main1.jpg"
-                                alt="placeholder"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
-                    </div>
+            <img
+            src="/flower.png"
+            alt="Overlay"
+            className="absolute left-1/4 bottom-[-20px] -translate-x-1/2 w-[170px] h-[170px] z-20"
+            />
+        </div>
+    </section>
 
-                    {/* 제목 */}
-                    <h1 className="text-4xl md:text-6xl font-extrabold text-center text-gray-800">Inspiration</h1>
+<section className="bg-Abeige px-20 relative z-0 pt-10 pb-20 flex flex-col items-center gap-16">
+  {/* 웨이브 텍스트 */}
+  <div className="relative w-full h-[200px] -mb-[20px] bg-[#FFFCFB] overflow-visible">
+    <svg
+      viewBox="0 0 1440 120"
+      className="w-full h-4/5"
+      preserveAspectRatio="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        id="wavePath"
+        d="
+          M0,60
+          C 60,50 120,70 180,60
+          S 300,70 360,60
+          S 480,50 540,60
+          S 660,70 720,60
+          S 840,50 900,60
+          S 1020,70 1080,60
+          S 1200,50 1260,60
+          S 1380,70 1440,60
+        "
+        fill="none"
+      />
+<text fontSize="40" fontFamily="'Unbounded', sans-serif" dominantBaseline="middle">
+  <textPath href="#wavePath" startOffset="50%" textAnchor="middle">
+    <tspan
+      fill="#B4BCEB"
+      fontWeight="300"
+      fontSize="32"
+      letterSpacing="3px"
+    >
+      It's the goal of
+    </tspan>
+    <tspan
+      dx="18"
+      fill="#6B84E7"
+      fontWeight="700"
+      fontSize="48"
+      letterSpacing="6px"
+    >
+      ABOUT
+    </tspan>
+  </textPath>
+</text>
 
-                    {/* 두 번째 줄 */}
-                    <div className="flex flex-col md:flex-row gap-4">
-                        <div className="bg-white rounded-xl shadow-md h-48 md:h-40 overflow-hidden w-full md:w-1/2">
-                            <img
-                                src="/main2.jpg"
-                                alt="placeholder"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
-                        <div className="bg-white p-4 rounded-xl shadow-md h-48 md:h-40 flex flex-col justify-between w-full md:w-1/2">
-                            <h3 className="text-xl font-bold mb-2">FILLVOID</h3>
-                            <p className="text-sm text-gray-700 leading-snug">
-                                나에게 꼭 필요한 질문을 통해 튜터와 함께 하는 모임 콘텐츠를 제공하여 교육 문화를
-                                선도하고자 합니다.
-                            </p>
-                        </div>
-                    </div>
-                </div>
 
-                {/* Footer 텍스트 */}
-                <div className="mt-12 text-center text-sm text-gray-600 z-10 max-w-md px-2">
-                    <p>
-                        At the end of the ordinary day,
-                        <br />
-                        when you fully focus on the sensuous moment
-                        <br />
-                        to find your inner self that is blurring in countless relationships,
-                        <br />
-                        life becomes clear again.
-                    </p>
-                </div>
-            </section>
+    </svg>
+  </div>
 
-            <section className="py-16 bg-neutral-100 px-4">
-                <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl md:text-4xl font-semibold text-neutral-800 mb-8">About Us</h2>
-                    <p className="text-base md:text-lg text-neutral-600 leading-relaxed">
-                        어바웃에서는 대외 활동을 하고 있는 모든 청년들과 소통하고 공유하는 모임을 준비했습니다.
-                        <br />
-                        어바웃에서는 '질문'에서 부터 시작했습니다.
-                        <br />
-                        나에게 꼭 필요한 질문을 통해 튜터와 함께 하는 모임 콘텐츠를 제공하여 교육 문화를 선도하고자
-                        합니다.
-                        <br />
-                        <br />
-                        문제를 해결하고 대처하는 능력을 위해 어바웃에서는 일방적 소통이 아닌, 상호작용을 위해
-                        발전하겠습니다.
-                    </p>
-                </div>
-            </section>
+  {/* 카드들 */}
+  <div className="flex justify-center items-center gap-10 flex-wrap">
+    {[1, 2, 3].map((i) => {
+      let title = '';
+      let text = '';
+      let bgColor = 'bg-Ablue';
+      let borderColor = '#CDD4EF';
 
-            <section className="py-16 bg-neutral-50 px-4">
-                <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl md:text-4xl font-semibold text-neutral-800 mb-8">A B O U T 의 목표</h2>
-                    <p className="text-base md:text-lg text-neutral-600 leading-relaxed">
-                        어바웃의 목표는 청년들의 지적 수준을 높여 합리적이고 효율적인 생활을 할 수 있도록 돕는 것입니다.
-                        <br />
-                        <br />
-                        빠르게 변화하는 사회 속에서 함몰되지 않기 위해 스스로에 대한 노력의 시간을 확보해야 합니다.
-                        <br />
-                        <br />
-                        어바웃의 모임 콘텐츠를 이용해 보다 재밌는 일상을 경험해보세요.
-                        <br />
-                        튜터가 기다리고 있겠습니다.
-                    </p>
-                </div>
-            </section>
+      if (i === 1) {
+        title = '소통과 공유';
+        text = '어바웃은 청년들과 소통하고 공유하는 모임입니다. 상호작용으로 함께 성장해요.';
+      } else if (i === 2) {
+        title = '질문과 교육';
+        text = '어바웃은 질문에서 시작해 튜터와 함께하는 교육 콘텐츠를 제공합니다.';
+        bgColor = 'bg-Apink';
+        borderColor = '#FFDFE1';
+      } else if (i === 3) {
+        title = '목표와 성장';
+        text = '어바웃은 청년들의 지적 성장과 효율적인 생활을 돕습니다. 스스로 노력하는 시간을 만드세요.';
+      }
+
+      return (
+        <div
+          key={i}
+          className={`${bgColor} w-[280px] rounded-t-[130px] rounded-b-3xl overflow-hidden shadow-lg flex flex-col`}
+          style={{ borderTopLeftRadius: '130px', borderTopRightRadius: '130px', minHeight: '420px' }}
+        >
+          {/* 이미지 영역 */}
+          <div
+            className="w-full h-[220px] overflow-hidden"
+            style={{
+              borderTopLeftRadius: '130px',
+              borderTopRightRadius: '130px',
+              border: `8px solid ${borderColor}`,
+            }}
+          >
+            <img
+              src={`/thumb${i}.jpg`}
+              alt={`Thumb ${i}`}
+              className="w-full h-full object-cover"
+              style={{ borderTopLeftRadius: '130px', borderTopRightRadius: '130px' }}
+            />
+          </div>
+
+          {/* 텍스트 */}
+          <div className="px-6 pt-6 pb-8 flex-grow flex flex-col justify-start items-center text-center">
+            <h3 className="text-[22px] text-blue-950 font-bold font-nanumpen leading-tight mb-3 tracking-tight">
+              {title}
+            </h3>
+            <p className="text-gray-800 text-[15px] leading-relaxed font-pretendard tracking-normal max-w-[230px]">
+              {text}
+            </p>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</section>
+
+
+
+
+
+
+
+
         </>
     );
 }
+

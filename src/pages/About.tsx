@@ -1,6 +1,8 @@
 export default function About() {
-    return (
-        <div className="bg-light">
+    return (    
+        <>
+        <section className="px-20 bg-Abeige w-full h-screen flex justify-center items-center">
+
             <div className="max-w-5xl mx-auto px-4 py-12">
                 <section className="text-left mb-8">
                     <h1 className="inline-block text-xl md:text-2xl text-black mb-3 border-2 border-gray-800 rounded-full px-4 md:px-5 py-1">
@@ -82,6 +84,7 @@ export default function About() {
                     </div>
                 </section>
             </div>
-        </div>
-    );
+        </section>
+    </>  
+    )
 }

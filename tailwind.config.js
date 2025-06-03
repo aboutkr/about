@@ -9,20 +9,15 @@ export default {
                 accent: '#e84797',
                 highlight: '#e7a0cc',
                 light: '#efe8e0',
-                Adeepblue: '#99ADEE',
-                Ablue: '#CDD4EF',
-                Apink: '#FFDFE1',
-                Abeige: '#FFFCFB',
-                Aviolet: '#98A7E2',
+                Ablue: '#0A54D9',
+                Apink: '#F3CDD8',
+                Abeige: '#F9F4EE',
+                Aorange: '#F3442C',
             },
       fontFamily: {
-        playfair: ['"Playfair Display"', 'serif'],
-        dmserif: ['"DM Serif Display"', 'serif'],
-        poppins: ['"Poppins"', 'sans-serif'],
-        quicksand: ['"Quicksand"', 'sans-serif'],
-        cafe24: ['"Cafe24 Ssurround"', 'sans-serif'],
-        pretendard: ['"Pretendard"', 'sans-serif'],
-        nanumpen: ['"Nanum Pen Script"', 'cursive'],
+        english: ['Nunito', 'sans-serif'],     // 영어
+        korean: ['Pretendard', 'sans-serif'],  // 한글
+        main: ['Pretendard', 'Nunito', 'sans-serif'], // 기본 통합형 (혼용)
       },
         },
     },

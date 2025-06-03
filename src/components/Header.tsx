@@ -1,18 +1,19 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import logo from '../assets/aboutlogo.png'
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 left-0 z-50 w-full bg-Apink/70 backdrop-blur-md py-4 px-6">
+        <header className="fixed top-0 left-0 z-50 w-full bg-Abeige/70 backdrop-blur-md py-2 px-20">
             <div className="flex justify-between items-center">
                 <Link to="/">
                     <img
-                        src="/aboutpink.jpg"
+                        src={logo}
                         alt="사이트 로고"
-                        className="h-10 w-auto"
+                        className="h-auto w-20"
                     />
                 </Link>
 
@@ -25,25 +26,25 @@ export default function Header() {
                 <nav className="hidden md:flex space-x-4">
                     <Link
                         to="/about"
-                        className="text-Adeepblue hover:text-Aviolet border border-transparent hover:border-Aviolet transition-all duration-1000 rounded px-2 py-1"
+                        className="text-[#000] hover:text-[#000] border border-transparent hover:border-[#000] transition-all duration-1000 rounded px-2 py-1"
                     >
                         About
                     </Link>
                     <Link
                         to="/contents"
-                        className="text-Adeepblue hover:text-Aviolet border border-transparent hover:border-Aviolet transition-all duration-1000 rounded px-2 py-1"
+                        className="text-[#000] hover:text-[#000] border border-transparent hover:border-[#000] transition-all duration-1000 rounded px-2 py-1"
                     >
                         Contents
                     </Link>
                     <Link
                         to="/partners"
-                        className="text-Adeepblue hover:text-Aviolet border border-transparent hover:border-Aviolet transition-all duration-1000 rounded px-2 py-1"
+                        className="text-[#000] hover:text-[#000] border border-transparent hover:border-[#000] transition-all duration-1000 rounded px-2 py-1"
                     >
                         Partners
                     </Link>
                     <Link
                         to="/contact"
-                        className="text-Adeepblue hover:text-Aviolet border border-transparent hover:border-Aviolet transition-all duration-1000 rounded px-2 py-1"
+                        className="text-[#000] hover:text-[#000] border border-transparent hover:border-[#000] transition-all duration-1000 rounded px-2 py-1"
                     >
                         Contact
                     </Link>
@@ -55,28 +56,28 @@ export default function Header() {
                     <Link
                         to="/about"
                         onClick={() => setMenuOpen(false)}
-                        className="text-Adeepblue hover:text-Aviolet border border-transparent hover:border-Aviolet transition-all duration-1000 rounded px-2 py-1"
+                        className="text-[#000] hover:text-[#000] border border-transparent hover:border-[#000] transition-all duration-1000 rounded px-2 py-1"
                     >
                         About
                     </Link>
                     <Link
                         to="/contents"
                         onClick={() => setMenuOpen(false)}
-                        className="text-Adeepblue hover:text-Aviolet border border-transparent hover:border-Aviolet transition-all duration-1000 rounded px-2 py-1"
+                        className="text-[#000] hover:text-[#000] border border-transparent hover:border-[#000] transition-all duration-1000 rounded px-2 py-1"
                     >
                         Contents
                     </Link>
                     <Link
                         to="/partners"
                         onClick={() => setMenuOpen(false)}
-                        className="text-Adeepblue hover:text-Aviolet border border-transparent hover:border-Aviolet transition-all duration-1000 rounded px-2 py-1"
+                        className="text-[#000] hover:text-[#000] border border-transparent hover:border-[#000] transition-all duration-1000 rounded px-2 py-1"
                     >
                         Partners
                     </Link>
                     <Link
                         to="/contact"
                         onClick={() => setMenuOpen(false)}
-                        className="text-Adeepblue hover:text-Aviolet border border-transparent hover:border-Aviolet transition-all duration-1000 rounded px-2 py-1"
+                        className="text-[#000] hover:text-[#000] border border-transparent hover:border-[#000] transition-all duration-1000 rounded px-2 py-1"
                     >
                         Contact
                     </Link>

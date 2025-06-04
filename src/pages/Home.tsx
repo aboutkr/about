@@ -1,178 +1,174 @@
 import { Link } from 'react-router-dom';
 
 const text = 'W O Y M ?';
+const renderCard = (i: number) => {
+  const info = [
+    {
+      title: '소통과 공유',
+      text: '어바웃은 청년들과 소통하고 공유하는 모임입니다. 상호작용으로 함께 성장해요.',
+    },
+    {
+      title: '질문과 교육',
+      text: '어바웃은 질문에서 시작해 튜터와 함께하는 교육 콘텐츠를 제공합니다.',
+    },
+    {
+      title: '목표와 성장',
+      text: '어바웃은 청년들의 지적 성장과 효율적인 생활을 돕습니다. 스스로 노력하는 시간을 만드세요.',
+    },
+  ][i - 1];
+
+  const isSecond = i === 2;
+
+  return (
+    <div
+      key={i}
+      className={`w-52 sm:w-64 h-[280px] sm:h-[320px] lg:h-[360px] xl:h-[400px] rounded-t-full shadow-lg overflow-hidden border-4 ${
+        isSecond ? 'bg-Apink border-white' : 'bg-white border-white'
+      }`}
+    >
+      <div className="h-[60%]">
+        <img
+          src={`/thumb${i}.jpg`}
+          alt={`thumb${i}`}
+          className="w-full h-full object-cover rounded-t-full"
+        />
+      </div>
+      <div className="flex flex-col items-center justify-center px-4 py-4 flex-grow text-center font-korean">
+        <h3 className="text-base sm:text-lg font-bold mb-2">{info.title}</h3>
+        <p className="text-[11px] sm:text-xs lg:text-sm text-gray-600 leading-relaxed">{info.text}</p>
+      </div>
+    </div>
+  );
+};
 
 export default function Home() {
   return (
-    <>
-      <section className="px-20 bg-Abeige w-full h-screen flex justify-center items-center">
+    <main className="bg-Abeige pt-8 lg:pt-20">
+      {/* Section 1 */}
+      <section className="px-4 md:px-12 lg:px-20  w-full flex justify-center items-center py-12">
         <div
-          className="w-4/5 h-3/5 bg-white rounded-[16px] relative"
-          style={{
-            boxShadow: '6px 6px 0 0 black',
-          }}
+          className="w-full max-w-5xl bg-white rounded-[16px] h-[45vh] sm:h-[50vh] md:h-[60vh] lg:h-[60vh]"
+          style={{ boxShadow: '6px 6px 0 0 black' }}
         >
-          <div className="h-12 bg-Ablue rounded-t-[16px] flex items-center px-6 gap-3">
-            <span className="w-4 h-4 bg-red-500 rounded-full"></span>
-            <span className="w-4 h-4 bg-yellow-400 rounded-full"></span>
-            <span className="w-4 h-4 bg-green-500 rounded-full"></span>
+          <div className="h-12 bg-Ablue rounded-t-[16px] flex items-center px-4 gap-3">
+            <div className="w-3 h-3 bg-red-500 rounded-full" />
+            <div className="w-3 h-3 bg-yellow-400 rounded-full" />
+            <div className="w-3 h-3 bg-green-500 rounded-full" />
           </div>
-        <div className="p-6 min-h-[300px] rounded-b-[16px]">
-        <p
-            className="text-gray-700 font-english italic mb-1 border-b-2 border-dashed border-gray-400 pb-2"
-            style={{ marginTop: '1.5rem' }} //
-        >
-            What is on your mind
-        </p>
-        <h2
-            className=" font-english font-bold flex justify-center items-end gap-2 w-full h-full text-[16vw]"
+
+          <div className="p-6 min-h-[300px] rounded-b-[16px]">
+            <p
+              className="text-gray-700 font-english italic mb-1 border-b-2 border-dashed border-gray-400 pb-2 mt-6"
+            >
+              What is on your mind
+            </p>
+          <h2
+            className="font-english font-bold flex justify-center items-end gap-2 w-full h-full
+             pt-6 lg:pt-0
+             text-[16vw] sm:text-[14vw] md:text-[16vw] lg:text-[16vw] xl:text-[16vw]"
             style={{ marginTop: '0.2rem' }}
-        >
+          >
             {text.split('').map((char, i) => (
-            <span
+              <span
                 key={i}
                 className="inline-block opacity-0"
                 style={{
-                animation: 'dropIn 0.5s forwards',
-                animationDelay: `${i * 0.15}s`,
+                  animation: 'dropIn 0.5s forwards',
+                  animationDelay: `${i * 0.15}s`,
+                  textShadow: '2px 2px 8px rgba(0, 0, 0, 0.3)',
                 }}
-            >
+              >
                 {char}
-            </span>
+              </span>
             ))}
-        </h2>
-        </div>
+          </h2>
+
+          </div>
 
         </div>
-
-        <style>{`
-          @keyframes dropIn {
-            0% {
-              opacity: 0;
-              transform: translateY(-50px);
-            }
-            100% {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-        `}</style>
       </section>
-      
-    <section className="px-20 bg-Abeige w-full h-screen flex justify-center items-center relative">
-    <div className="z-10 text-center">
-        <h1 className="text-6xl font-english font-extrabold tracking-wide leading-tight mb-8">ABOUT’s  GOAL</h1>
-        <p className="text-gray-700 font-korean max-w-md mx-auto">
-        어바웃의 목표는 대한민국 청년들의 지적 수준을 높여<br/>
-        합리적이고 효율적인 생활을 할 수 있도록 돕는 것입니다.<br/><br/>
 
-        빠르게 변화하는 사회 속에서 함몰되지 않기 위해<br/>
-        스스로에 대한 노력의 시간을 확보해야합니다.<br/><br/>
-
-        어바웃의 모임 콘텐츠를 이용해 보다 재밌는 일상을 경험해보세요.<br/>
-        튜터가 기다리고 있겠습니다.
-        </p>
-        <Link to="/contact">
-            <button className="mt-8 bg-[#fff] hover:bg-Aorange text-[#000] hover:text-[#fff] font-semibold py-3 px-6 rounded-[16px] shadow-md transition duration-300"
-                      style={{
-            boxShadow: '6px 6px 0 0 black',
-          }}>
-                Contact Us {'->'}
+      {/* Section 2 */}
+      <section className="relative w-full min-h-[60vh] lg:min-h-screen flex justify-center items-center px-10 md:px-12 lg:px-20 
+  py-16 sm:py-20 md:py-24 lg:py-32 xl:py-40">
+        <div className="z-10 text-center max-w-xl">
+          <h1 className="text-3xl sm:text-5xl font-english font-extrabold mb-6">
+            ABOUT’s GOAL
+          </h1>
+          <p className="text-sm sm:text-base text-gray-700 font-korean leading-relaxed">
+            어바웃의 목표는 대한민국 청년들의 지적 수준을 높여<br />
+            합리적이고 효율적인 생활을 할 수 있도록 돕는 것입니다.<br /><br />
+            빠르게 변화하는 사회 속에서 함몰되지 않기 위해<br />
+            스스로에 대한 노력의 시간을 확보해야합니다.<br /><br />
+            어바웃의 모임 콘텐츠를 이용해 보다 재밌는 일상을 경험해보세요.<br />
+            튜터가 기다리고 있겠습니다.
+          </p>
+          <Link to="/contact">
+            <button className="mt-6 bg-white hover:bg-Aorange text-black hover:text-white font-semibold py-2 px-5 rounded-[16px] shadow-md transition duration-300" style={{ boxShadow: '6px 6px 0 0 black' }}>
+              Contact Us {'->'}
             </button>
-        </Link>
-    </div>
+          </Link>
+        </div>
 
-    <img
-        src="/pinkflower.png"
-        alt="꽃 왼쪽"
-        className="absolute top-10 left-10 w-80 h-auto object-contain"
-    />
-    <img
-        src="/blueflower.png"
-        alt="꽃 오른쪽"
-        className="absolute top-30 right-10 w-32 h-32 object-contain"
-    />
-    <img
-        src="/orangeflower.png"
-        alt="꽃 하단"
-        className="absolute bottom-0 left-1/2 transform -translate-x-2/5 translate-y-1/2 w-36 h-36  z-10 object-contain"
-    />
-    </section>
+        {/* Images */}
+        <img src="/pinkflower.png" alt="꽃 왼쪽" className="absolute top-5 left-4 w-24 sm:w-40 lg:w-64" />
+        <img src="/orangeflower.png" alt="꽃 오른쪽" className="absolute top-30 right-10 w-16 sm:w-24 lg:w-28" />
+        <img src="/blueflower.png" alt="꽃 하단" className="absolute z-10  bottom-0 left-3/5 transform -translate-x-1/2 translate-y-1/2 w-20 sm:w-28 lg:w-36" />
+      </section>
 
-    <section className="w-full min-h-screen flex relative overflow-hidden">
-      {/* 배경 기둥 */}
+      {/* Section 3 */}
+<section className="w-full min-h-[60vh] lg:min-h-screen bg-Apink relative overflow-hidden flex flex-col items-center justify-center px-4 py-12">
+
+  {/* ✅ 배경 스트립 (z-0 / absolute) */}
+  <div className="absolute inset-0 z-0 flex">
     {Array.from({ length: 21 }).map((_, i) => (
-    <div
-        key={i}
-        className={`flex-1 ${i % 2 === 0 ? 'bg-Apink' : 'bg-Abeige'}`}
-    />
-    ))}
-
-      {/* 중앙 콘텐츠 */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 px-6">
-        {/* 창문 박스 3개 */}
-<div className="flex flex-wrap justify-center gap-16 mb-16 ">
-  {[1, 2, 3].map((i) => {
-    let title = '';
-    let text = '';
-    let boxBg = 'bg-white';
-    let borderColor = 'transparent';
-
-    if (i === 1) {
-      title = '소통과 공유';
-      text = '어바웃은 청년들과 소통하고 공유하는 모임입니다. 상호작용으로 함께 성장해요.';
-    } else if (i === 2) {
-      title = '질문과 교육';
-      text = '어바웃은 질문에서 시작해 튜터와 함께하는 교육 콘텐츠를 제공합니다.';
-      boxBg = 'bg-Apink';
-      borderColor = '#FFF';
-    } else if (i === 3) {
-      title = '목표와 성장';
-      text = '어바웃은 청년들의 지적 성장과 효율적인 생활을 돕습니다. 스스로 노력하는 시간을 만드세요.';
-    }
-
-    return (
       <div
         key={i}
-        className={`w-72 h-[380px] ${boxBg} rounded-t-full shadow-lg flex flex-col overflow-hidden`}
-        style={{ border: `4px solid ${borderColor}` }}
-      >
-        {/* 이미지 영역 */}
-        <div className="h-[60%] w-full overflow-hidden rounded-t-full">
-          <img
-            src={`/thumb${i}.jpg`}
-            alt={`Window ${i}`}
-            className="w-full h-full object-cover"
-          />
-        </div>
+        className={`flex-1 ${i % 2 === 0 ? 'bg-Apink' : 'bg-Abeige'}`}
+      />
+    ))}
+  </div>
 
-        {/* 텍스트 영역 */}
-        <div className="font-korean flex flex-col justify-start items-center p-4 h-[40%]">
-          <h3 className="text-xl font-bold mb-2">{title}</h3>
-          <p className="text-center text-sm text-gray-600">{text}</p>
-        </div>
-      </div>
-    );
-  })}
-</div>
+  {/* ✅ 중간 크기 (sm~lg)에서만 특수 레이아웃 */}
+  <div className="hidden sm:flex lg:hidden flex-col gap-6 mb-12 z-10 w-full max-w-5xl">
+    {/* 상단 중앙: 2번 */}
+    <div className="flex justify-center">
+      {renderCard(2)}
+    </div>
+    {/* 하단 좌우: 1번, 3번 */}
+    <div className="flex justify-center gap-6">
+      {renderCard(1)}
+      {renderCard(3)}
+    </div>
+  </div>
+
+  {/* ✅ 모바일 (sm 미만) */}
+  <div className="flex sm:hidden flex-col gap-6 mb-12 z-10">
+    {renderCard(1)}
+    {renderCard(2)}
+    {renderCard(3)}
+  </div>
+
+  {/* ✅ 데스크탑 (lg 이상) */}
+  <div className="hidden lg:grid grid-cols-3 gap-6 mb-12 z-10 w-full max-w-5xl">
+    {renderCard(1)}
+    {renderCard(2)}
+    {renderCard(3)}
+  </div>
+
+  {/* 버튼 */}
+  <Link to="/contents" className="z-10">
+    <button
+      className="bg-white hover:bg-Aorange hover:text-white text-black font-semibold py-2 px-6 rounded-[16px] shadow-md transition duration-300"
+      style={{ boxShadow: '6px 6px 0 0 black' }}
+    >
+      more
+    </button>
+  </Link>
+
+</section>
 
 
-
-
-        {/* 하단 버튼 */}
-        <Link to="/contents">
-          <button
-            className="bg-[#fff] hover:bg-Aorange hover:text-[#fff] text-[#000] font-semibold py-3 px-6 rounded-[16px] shadow-md transition duration-300"
-            style={{
-              boxShadow: '6px 6px 0 0 black',
-            }}
-          >
-            more
-          </button>
-        </Link>
-      </div>
-    </section>
-
-    </>
+    </main>
   );
 }

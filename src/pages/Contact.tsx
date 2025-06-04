@@ -75,7 +75,8 @@ export default function Contact() {
           />
           <button
             type="submit"
-            className="border-2 border-gray-800 text-black px-4 py-2 rounded hover:bg-Aorange hover:text-[#fff] "
+            className="bg-white border hover:bg-Aorange hover:text-white text-black font-semibold py-2 px-6 rounded-[16px] shadow-md transition duration-300"
+            style={{ boxShadow: '6px 6px 0 0 black' }}
           >
             보내기
           </button>

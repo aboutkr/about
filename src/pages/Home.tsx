@@ -71,15 +71,15 @@ export default function Home() {
             {text.split('').map((char, i) => (
               <span
                 key={i}
-                className="inline-block opacity-0"
+                className={`inline-block opacity-0 animate-dropIn`}
                 style={{
-                  animation: 'dropIn 0.5s forwards',
                   animationDelay: `${i * 0.15}s`,
                   textShadow: '2px 2px 8px rgba(0, 0, 0, 0.3)',
                 }}
               >
                 {char}
               </span>
+
             ))}
           </h2>
 
@@ -119,7 +119,7 @@ export default function Home() {
       {/* Section 3 */}
 <section className="w-full min-h-[60vh] lg:min-h-screen bg-Apink relative overflow-hidden flex flex-col items-center justify-center px-4 py-12">
 
-  {/* ✅ 배경 스트립 (z-0 / absolute) */}
+  {/* 배경 스트립 (전체 너비 유지) */}
   <div className="absolute inset-0 z-0 flex">
     {Array.from({ length: 21 }).map((_, i) => (
       <div
@@ -129,44 +129,45 @@ export default function Home() {
     ))}
   </div>
 
-  {/* ✅ 중간 크기 (sm~lg)에서만 특수 레이아웃 */}
-  <div className="hidden sm:flex lg:hidden flex-col gap-6 mb-12 z-10 w-full max-w-5xl">
-    {/* 상단 중앙: 2번 */}
-    <div className="flex justify-center">
-      {renderCard(2)}
-    </div>
-    {/* 하단 좌우: 1번, 3번 */}
+  {/* 중간 크기 (sm~lg) 특수 레이아웃 */}
+  <div className="hidden sm:flex lg:hidden flex-col gap-6 mb-12 z-10 w-full max-w-5xl mx-auto">
+    <div className="flex justify-center">{renderCard(2)}</div>
     <div className="flex justify-center gap-6">
       {renderCard(1)}
       {renderCard(3)}
     </div>
   </div>
 
-  {/* ✅ 모바일 (sm 미만) */}
-  <div className="flex sm:hidden flex-col gap-6 mb-12 z-10">
-    {renderCard(1)}
-    {renderCard(2)}
-    {renderCard(3)}
-  </div>
+<div className="flex sm:hidden flex-col items-center gap-6 mb-12 z-10 w-full max-w-5xl mx-auto">
+  {renderCard(1)}
+  {renderCard(2)}
+  {renderCard(3)}
+</div>
 
-  {/* ✅ 데스크탑 (lg 이상) */}
-  <div className="hidden lg:grid grid-cols-3 gap-6 mb-12 z-10 w-full max-w-5xl">
+  {/* 데스크탑 (lg 이상) - 배경 기둥 너비만큼 오른쪽 이동 */}
+  <div
+    className="hidden lg:grid grid-cols-3 gap-6 mb-12 z-10 w-full max-w-5xl mx-auto"
+    style={{ transform: 'translateX(calc((100% / 21) * 0.8))' }}
+  >
     {renderCard(1)}
     {renderCard(2)}
     {renderCard(3)}
   </div>
 
   {/* 버튼 */}
-  <Link to="/contents" className="z-10">
-    <button
-      className="bg-white hover:bg-Aorange hover:text-white text-black font-semibold py-2 px-6 rounded-[16px] shadow-md transition duration-300"
-      style={{ boxShadow: '6px 6px 0 0 black' }}
-    >
-      more
-    </button>
-  </Link>
+  <div className="z-10 w-full max-w-5xl mx-auto flex justify-center">
+    <Link to="/contents">
+      <button
+        className="bg-white hover:bg-Aorange hover:text-white text-black font-semibold py-2 px-6 rounded-[16px] shadow-md transition duration-300"
+        style={{ boxShadow: '6px 6px 0 0 black' }}
+      >
+        more
+      </button>
+    </Link>
+  </div>
 
 </section>
+
 
 
     </main>

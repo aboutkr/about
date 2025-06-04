@@ -1,9 +1,9 @@
 export default function About() {
   return (
     <>
-      <section className="pt-20 px-20 bg-Abeige w-full flex justify-center items-start py-10">
+      <section className="pt-20 px-4 sm:px-10 md:px-16 lg:px-20 bg-Abeige w-full flex justify-center items-start py-10">
         <div
-          className="w-4/5 bg-white rounded-[16px] relative flex flex-col"
+          className="w-full lg:w-4/5 bg-white rounded-[16px] relative flex flex-col"
           style={{
             boxShadow: '6px 6px 0 0 black',
           }}
@@ -25,24 +25,27 @@ export default function About() {
             <section className="w-full bg-Bbeige px-6 md:px-20 py-16 flex justify-center items-start">
               <div className="w-full max-w-5xl space-y-16">
                 {/* About Us 헤더 */}
-              <section className="space-y-4">
-                <div className="inline-flex items-center px-3 py-1 bg-Bpink text-black font-bold text-lg md:text-2xl gap-2">
-                  <img
-                    src="/pinkflower.png"
-                    alt="About Us Icon"
-                    className="w-8 h-8"
-                  />
-                  About Us
-                </div>
-                <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-                  어바웃에서는 대외 활동을 하고 있는 모든 청년들과 소통하고 공유하는 모임을 준비했습니다.
-                </p>
-              </section>
+                <section className="space-y-4">
+                  <div
+                    className="inline-flex items-center px-6 py-3 bg-Bpink text-black font-bold text-3xl sm:text-3xl md:text-4xl gap-5 min-w-[220px] min-h-[56px] rounded-md"
+                    style={{ justifyContent: 'flex-start' }}
+                  >
+                    <img
+                      src="/pinkflower.png"
+                      alt="About Us Icon"
+                      className="w-14 h-14"
+                    />
+                    About Us
+                  </div>
+                  <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+                    어바웃에서는 대외 활동을 하고 있는 모든 청년들과 소통하고 공유하는 모임을 준비했습니다.
+                  </p>
+                </section>
 
                 {/* 카드 섹션 */}
                 <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-white rounded-3xl shadow-lg p-6 md:p-8 transition hover:shadow-xl">
-                    <h2 className="text-xl md:text-xl font-bold text-black mb-2">
+                    <h2 className="text-xl md:text-xl font-semibold text-black mb-2">
                       ⌜ Our Vision ⌟
                     </h2>
                     <p className="text-gray-600 text-sm md:text-base leading-relaxed">
@@ -50,7 +53,7 @@ export default function About() {
                     </p>
                   </div>
                   <div className="bg-white rounded-3xl shadow-lg p-6 md:p-8 transition hover:shadow-xl">
-                    <h2 className="text-xl md:text-xl font-bold text-black mb-2">
+                    <h2 className="text-xl md:text-xl font-semibold text-black mb-2">
                       ⌜ What We Do ⌟
                     </h2>
                     <p className="text-gray-600 text-sm md:text-base leading-relaxed">
@@ -61,15 +64,17 @@ export default function About() {
 
                 {/* History 섹션 */}
                 <section className="space-y-8">
-                  <div className="inline-flex items-center px-3 py-1 bg-Bpink text-black font-bold text-lg md:text-2xl gap-2">
-                  <img
-                    src="/orangeflower.png"
-                    alt="About Us Icon"
-                    className="w-8 h-8"
-                  />
+                  <div
+                    className="inline-flex items-center px-6 py-3 bg-Bpink text-black font-bold text-3xl sm:text-3xl md:text-4xl gap-5 min-w-[220px] min-h-[56px] rounded-md"
+                    style={{ justifyContent: 'flex-start' }}
+                  >
+                    <img
+                      src="/orangeflower.png"
+                      alt="About Us Icon"
+                      className="w-14 h-14"
+                    />
                     History
                   </div>
-
                   {/* 연도별 타임라인 */}
                   <div className="space-y-10">
                     {[

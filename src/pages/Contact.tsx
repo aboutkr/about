@@ -27,7 +27,7 @@ export default function Contact() {
 
   return (
     <>
-      <section className="pt-20 px-20 bg-Abeige w-full flex justify-center items-start py-10">
+      <section className="pt-20 px-4 sm:px-10 md:px-16 lg:px-20 bg-Abeige w-full flex justify-center items-start py-10">
         <div
           className="w-4/5 bg-white rounded-[16px] relative flex flex-col"
           style={{

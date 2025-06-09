@@ -8,3 +8,9 @@ html, body {
   background-color: #F9F4EE;
 }
 
+/* slick-carousel 기본 버튼에 커스터마이징 적용 */
+.slick-prev:before,
+.slick-next:before {
+  color: #0A54D9 !important; /* 원하는 색상으로 변경 (예: 검정색) */
+  font-size: 30px; /* 크기 조정도 가능 */
+}

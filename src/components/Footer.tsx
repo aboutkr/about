@@ -17,7 +17,6 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* 빠른 링크 */}
         <nav className="md:flex-1">
           <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm">
@@ -48,14 +47,15 @@ export default function Footer() {
           </ul>
         </nav>
 
-        {/* 연락처 및 SNS */}
         <div className="md:flex-1">
           <h3 className="text-lg font-semibold mb-3">Contact</h3>
-          <p className="text-sm mb-3">이메일: <a href="mailto:aboutcompany@gmail.com" className="underline hover:text-white">aboutcompany@gmail.com</a></p>
+          <p className="text-sm mb-3">이메일: <a href="mailto:about.kr.team@gmail.com
+          " className="underline hover:text-white">about.kr.team@gmail.com
+          </a></p>
           <div className="flex items-center gap-3 text-sm">
             <Instagram className="w-5 h-5 text-pink-500" />
             <a
-              href="https://www.instagram.com/about_.youth/"
+              href="https://www.instagram.com/about_.youth/profilecard/?igsh=cG05c3I3eDF6N2wz"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline hover:text-white transition-colors duration-300"
@@ -66,7 +66,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* 저작권 표시 */}
       <div className="border-t border-gray-400 py-5 text-center text-xs text-gray-300 select-none">
         © {new Date().getFullYear()} MySite. All rights reserved.
       </div>

@@ -8,9 +8,6 @@ import { useNavigate } from 'react-router-dom';
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-console.log("Supabase URL:", supabaseUrl);
-console.log("Supabase ANON KEY:", supabaseAnonKey);
-
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 interface ContentItem {
   id: string;

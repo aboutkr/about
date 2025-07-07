@@ -19,7 +19,6 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Desktop Nav */}
         <nav className="hidden md:flex gap-6">
           {['about', 'contents', 'partners', 'contact'].map((page) => (
             <Link
@@ -33,7 +32,6 @@ export default function Header() {
         </nav>
       </div>
 
-      {/* Mobile Nav */}
       {menuOpen && (
         <nav className="flex flex-col mt-3 space-y-3 md:hidden">
           {['about', 'contents', 'partners', 'contact'].map((page) => (

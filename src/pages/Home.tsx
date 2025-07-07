@@ -45,16 +45,12 @@ const renderCard = (i: number) => {
 export default function Home() {
   return (
     <main className="bg-Abeige pt-8 lg:pt-20">
-      {/* ================================================================== */}
-      {/* React 19+ SEO 최적화: title과 meta 태그를 컴포넌트 안에 직접 작성합니다. */}
-      {/* ================================================================== */}
       <title>어바웃유스 (about-youth) | 청년들을 위한 모든 콘텐츠가 있는 곳</title>
       <meta 
         name="description" 
         content="어바웃유스(about-youth)는 청년들의 성장과 다채로운 경험을 돕는 커뮤니티입니다. 소통, 교육, 성장을 위한 다양한 콘텐츠와 프로그램을 만나보세요." 
       />
 
-      {/* Section 1 */}
       <section className="px-4 md:px-12 lg:px-20  w-full flex justify-center items-center py-12">
         <div
           className="w-full max-w-5xl bg-white rounded-[16px] h-[45vh] sm:h-[50vh] md:h-[60vh] lg:h-[60vh]"
@@ -96,7 +92,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 2 */}
       <section className="relative w-full min-h-[60vh] lg:min-h-screen flex justify-center items-center px-10 md:px-12 lg:px-20 
         py-16 sm:py-20 md:py-24 lg:py-32 xl:py-40">
         <div className="z-10 text-center max-w-xl">
@@ -118,15 +113,12 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* Images */}
         <img src="/pinkflower.png" alt="꽃 왼쪽" className="absolute top-5 left-4 w-24 sm:w-40 lg:w-64" />
         <img src="/orangeflower.png" alt="꽃 오른쪽" className="absolute top-30 right-10 w-16 sm:w-24 lg:w-28" />
         <img src="/blueflower.png" alt="꽃 하단" className="absolute z-10  bottom-0 left-3/5 transform -translate-x-1/2 translate-y-1/2 w-20 sm:w-28 lg:w-36" />
       </section>
 
-      {/* Section 3 */}
       <section className="w-full min-h-[60vh] lg:min-h-screen bg-Apink relative overflow-hidden flex flex-col items-center justify-center px-4 py-12">
-        {/* 배경 스트립 (전체 너비 유지) */}
         <div className="absolute inset-0 z-0 flex">
           {Array.from({ length: 21 }).map((_, i) => (
             <div
@@ -136,7 +128,6 @@ export default function Home() {
           ))}
         </div>
 
-        {/* 중간 크기 (sm~lg) 특수 레이아웃 */}
         <div className="hidden sm:flex lg:hidden flex-col gap-6 mb-12 z-10 w-full max-w-5xl mx-auto">
           <div className="flex justify-center">{renderCard(2)}</div>
           <div className="flex justify-center gap-6">
@@ -151,7 +142,6 @@ export default function Home() {
           {renderCard(3)}
         </div>
 
-        {/* 데스크탑 (lg 이상) - 배경 기둥 너비만큼 오른쪽 이동 */}
         <div
           className="hidden lg:grid grid-cols-3 gap-6 mb-12 z-10 w-full max-w-5xl mx-auto"
           style={{ transform: 'translateX(calc((100% / 21) * 0.8))' }}
@@ -161,7 +151,6 @@ export default function Home() {
           {renderCard(3)}
         </div>
 
-        {/* 버튼 */}
         <div className="z-10 w-full max-w-5xl mx-auto flex justify-center">
           <Link to="/contents">
             <button

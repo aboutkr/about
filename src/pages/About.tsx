@@ -1,6 +1,12 @@
 export default function About() {
   return (
     <>
+       <title>ABOUT은 어떤 곳인가요? | 어바웃유스 (about-youth)</title>
+      <meta 
+        name="description" 
+        content="어바웃유스(about-youth)는 청년들의 성장과 다채로운 경험을 돕는 커뮤니티입니다. 소통, 교육, 성장을 위한 다양한 콘텐츠와 프로그램을 만나보세요." 
+      />
+
       <section className="pt-20 px-4 sm:px-10 md:px-16 lg:px-20 bg-Abeige w-full flex justify-center items-start py-10">
         <div
           className="w-full lg:w-4/5 bg-white rounded-[16px] relative flex flex-col"
@@ -24,7 +30,6 @@ export default function About() {
 
             <section className="w-full bg-Bbeige px-6 md:px-20 py-16 flex justify-center items-start">
               <div className="w-full max-w-5xl space-y-16">
-                {/* About Us 헤더 */}
                 <section className="space-y-4">
                   <div
                     className="inline-flex items-center px-6 py-3 bg-Bpink text-black font-bold text-3xl sm:text-3xl md:text-4xl gap-5 min-w-[220px] min-h-[56px] rounded-md"
@@ -42,7 +47,6 @@ export default function About() {
                   </p>
                 </section>
 
-                {/* 카드 섹션 */}
                 <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-white rounded-3xl shadow-lg p-6 md:p-8 transition hover:shadow-xl">
                     <h2 className="text-xl md:text-xl font-semibold text-black mb-2">
@@ -62,7 +66,6 @@ export default function About() {
                   </div>
                 </section>
 
-                {/* History 섹션 */}
                 <section className="space-y-8">
                   <div
                     className="inline-flex items-center px-6 py-3 bg-Bpink text-black font-bold text-3xl sm:text-3xl md:text-4xl gap-5 min-w-[220px] min-h-[56px] rounded-md"
@@ -75,7 +78,7 @@ export default function About() {
                     />
                     History
                   </div>
-                  {/* 연도별 타임라인 */}
+
                   <div className="space-y-10">
                     {[
                       {

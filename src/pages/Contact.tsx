@@ -12,10 +12,10 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,    // EmailJS 서비스 ID
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,   // 템플릿 ID
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,  
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
         form.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY    // 공개 API 키
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY   
       )
       .then(() => {
         setSent(true)

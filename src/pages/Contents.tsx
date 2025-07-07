@@ -1,5 +1,3 @@
-//contents
-
 import { useState, useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -21,7 +19,7 @@ interface ContentItem {
   description: string;
   poster_url: string;
   filename: string;
-  photos: string[]; // photos 컬럼이 배열(string[])일 때
+  photos: string[]; 
 }
 
 interface TabProps {
@@ -68,7 +66,6 @@ export default function Contents() {
   
   const navigate = useNavigate();
 
-  // DB에서 데이터 불러오기
   useEffect(() => {
     async function fetchContents() {
       setLoading(true);
@@ -89,47 +86,48 @@ export default function Contents() {
     fetchContents();
   }, []);
 
-  // 폴더 리스트: 모든 콘텐츠의 title 중 중복 없이
+
   const folderList = Array.from(new Set(contents.map((c) => c.title)));
 
-  // 선택된 폴더에 해당하는 콘텐츠 필터링
-  // 여기서 'selected'는 title 기준 필터임
   const filteredContents =
     selected === "All"
       ? contents
       : contents.filter((c) => c.title === selected);
 
-  // 실제 보여줄 단일 콘텐츠 (선택된 게 있으면 첫 번째 아이템)
   const currentContent = filteredContents[0];
 
   return (
+    <>
+      <title>ABOUT이 제공하는 컨텐츠 | 어바웃유스 (about-youth)</title>
+      <meta 
+        name="description" 
+        content="어바웃유스(about-youth)는 청년들의 성장과 다채로운 경험을 돕는 커뮤니티입니다. 소통, 교육, 성장을 위한 다양한 콘텐츠와 프로그램을 만나보세요." 
+      />
+
     <section className="pt-20 px-4 sm:px-10 md:px-16 lg:px-20 bg-Abeige w-full flex justify-center items-start py-10">
       <div
         className="w-full max-w-6xl min-h-[80vh] bg-white rounded-[16px] relative flex flex-col pb-[10px]"
         style={{ boxShadow: "6px 6px 0 0 black" }}
       >
-        {/* 상단 바 */}
+
         <div className="h-12 bg-Ablue rounded-t-[16px] flex items-center px-6 gap-3 shrink-0">
           <span className="w-4 h-4 bg-red-500 rounded-full"></span>
           <span className="w-4 h-4 bg-yellow-400 rounded-full"></span>
           <span className="w-4 h-4 bg-green-500 rounded-full"></span>
         </div>
 
-        {/* 타이틀 */}
         <div className="p-6 flex-shrink-0" style={{ minHeight: "80px" }}>
           <h2 className="text-[#000] font-english text-3xl font-extrabold italic mb-4 border-b-2 border-dashed border-gray-400 pb-2 pl-5">
             [ CONTENTS ]
           </h2>
         </div>
 
-        {/* 로딩/에러 */}
         {loading && <p className="p-4 text-center text-gray-600">로딩중...</p>}
         {error && <p className="p-4 text-center text-red-600">에러: {error}</p>}
 
-        {/* 메인 콘텐츠 */}
+
         {!loading && !error && (
           <div className="flex flex-col md:flex-row gap-0 m-6 rounded-xl relative flex-grow overflow-visible">
-            {/* 왼쪽 리스트 */}
             <div className="w-full md:w-1/4 bg-slate-100 rounded-l-xl p-4 shadow-inner overflow-auto">
               <div className="flex justify-between items-center mb-4">
                 <h3 className="text-lg font-bold">● List</h3>
@@ -165,7 +163,6 @@ export default function Contents() {
               </ul>
             </div>
 
-            {/* 오른쪽 본문 콘텐츠 */}
             <div className="w-full md:w-3/4 p-4 border bg-Abeige border-gray-300 rounded-r-xl relative z-10 overflow-visible">
               {selected !== "All" && (
                 <div className="absolute -top-11 right-4 flex gap-2 z-0">
@@ -266,6 +263,7 @@ export default function Contents() {
         )}
       </div>
     </section>
+  </>
   );
 }
 

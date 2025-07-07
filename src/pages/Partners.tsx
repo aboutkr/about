@@ -21,9 +21,7 @@ export default function Partners() {
               [ PARTNERS ]
             </h2>
 
-            {/* 두 개 박스 감싸는 컨테이너 */}
 <div className="flex flex-col md:flex-row gap-6 py-20 px-5">
-  {/* 첫 번째 박스 */}
   <div className="flex-1 bg-white rounded-[16px] p-6 shadow-md flex flex-col items-center gap-6">
     <div className="flex flex-col items-center w-full gap-2">
       <img
@@ -49,7 +47,6 @@ export default function Partners() {
     </a>
   </div>
 
-  {/* 두 번째 박스 */}
   <div className="flex-1 bg-white rounded-[16px] p-6 shadow-md flex flex-col items-center gap-6">
     <div className="flex flex-col items-center w-full gap-2">
       <img

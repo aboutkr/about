@@ -6,7 +6,6 @@ export default function Footer() {
   return (
     <footer className="w-full bg-Ablue text-Abeige">
       <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row md:justify-between md:items-start gap-10 md:gap-0">
-        {/* 브랜드 소개 */}
         <div className="md:flex-1">
         <Link to="/">
           <img src={logo} alt="사이트 로고" className="h-10 md:h-12 w-auto" />

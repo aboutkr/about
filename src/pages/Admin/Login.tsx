@@ -12,7 +12,7 @@ export default function LoginPage() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-
+    //vercel add Environment Variables
     if (email === FIXED_EMAIL && password === FIXED_PASSWORD) {
       localStorage.setItem('logged_in', 'true');
       console.log('로그인 성공! 대시보드로 이동합니다.');

@@ -96,14 +96,14 @@ export default function Home() {
         py-16 sm:py-20 md:py-24 lg:py-32 xl:py-40">
         <div className="z-10 text-center max-w-xl">
           <h1 className="text-3xl sm:text-5xl font-english font-extrabold mb-6">
-            어바웃유스 (about-youth)의 목표
+            ABOUT's goal
           </h1>
           <p className="text-sm sm:text-base text-gray-700 font-korean leading-relaxed">
-            어바웃유스의 목표는 대한민국 청년들의 지적 수준을 높여<br />
+            어바웃의 목표는 대한민국 청년들의 지적 수준을 높여<br />
             합리적이고 효율적인 생활을 할 수 있도록 돕는 것입니다.<br /><br />
             빠르게 변화하는 사회 속에서 함몰되지 않기 위해<br />
             스스로에 대한 노력의 시간을 확보해야합니다.<br /><br />
-            어바웃유스의 모임 콘텐츠를 이용해 보다 재밌는 일상을 경험해보세요.<br />
+            어바웃의 모임 콘텐츠를 이용해 보다 재밌는 일상을 경험해보세요.<br />
             튜터가 기다리고 있겠습니다.
           </p>
           <Link to="/contact">
